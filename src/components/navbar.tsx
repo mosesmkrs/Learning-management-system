@@ -15,7 +15,7 @@ export default function Navbar() {
       <div className="container flex items-center justify-between p-4 mx-auto">
         {/* Logo */}
         <div className="text-lg font-bold">
-          <Link to="/" className={`hover:text-gray-300`}>MyApp</Link>
+          <Link to="/" className={`hover:text-gray-300`}>FutureInternLMS</Link>
         </div>
 
         {/* Hamburger Icon */}

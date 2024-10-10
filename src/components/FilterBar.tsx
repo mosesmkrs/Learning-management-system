@@ -13,7 +13,7 @@ const FilterBar: React.FC<FilterBarProps> = ({ selectedFilter, setFilter }) => {
       {filters.map((filter) => (
         <button
           key={filter}
-          className={`px-4 py-2 rounded-md hover:bg-slate-700 hover:shadow-md hover:shadow-slate-50 hover:font-bold ${
+          className={`px-4 py-2 rounded-md hover:bg-slate-700 hover:shadow-md hover:shadow-slate-50 hover:font-bold duration-300 ${
             selectedFilter === filter
               ? 'bg-blue-600 text-white'
               : 'bg-gray-200 dark:bg-gray-600 dark:text-white'

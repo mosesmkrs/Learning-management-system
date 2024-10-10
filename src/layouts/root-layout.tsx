@@ -19,7 +19,7 @@ export default function RootLayout() {
       publishableKey={PUBLISHABLE_KEY}
     >
       <Navbar/>
-      <main>
+      <main className='bg-slate-800'>
         <Outlet />
       </main>
     </ClerkProvider>

@@ -2,8 +2,10 @@ import { SignIn } from '@clerk/clerk-react'
 
 export default function SignInPage() {
   return (
-    <div className='w-fit mt-10 mx-auto'>
-      <SignIn path="/sign-in"/>
+    <div className='mx-auto mt-10 w-fit'>
+      <SignIn path="/sign-in"
+      fallbackRedirectUrl={'/dashboard'}
+      />
     </div>
   )
 }

@@ -11,8 +11,8 @@ export default function Navbar() {
   }
 
   return (
-    <header className="bg-gray-800 text-white">
-      <div className="container mx-auto flex justify-between items-center p-4">
+    <header className="text-white bg-gray-900 border-b border-b-slate-500">
+      <div className="container flex items-center justify-between p-4 mx-auto">
         {/* Logo */}
         <div className="text-lg font-bold">
           <Link to="/" className={`hover:text-gray-300`}>MyApp</Link>
@@ -20,7 +20,7 @@ export default function Navbar() {
 
         {/* Hamburger Icon */}
         <button 
-          className="sm:hidden text-white focus:outline-none" 
+          className="text-white sm:hidden focus:outline-none" 
           onClick={toggleMenu}
         >
           <svg
@@ -39,16 +39,16 @@ export default function Navbar() {
           <ul className={`flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 ${isOpen ? 'p-8' : ''}`}>
 
             <li>
-              <Link to="/contact" className="hover:text-gray-300  sm:text-base" onClick={() => setIsOpen(false)}>Contact</Link>
+              <Link to="/contact" className="hover:text-gray-300 sm:text-base" onClick={() => setIsOpen(false)}>Contact</Link>
             </li>
             <li>
-              <Link to="/dashboard" className="hover:text-gray-300  sm:text-base" onClick={() => setIsOpen(false)}>Dashboard</Link>
+              <Link to="/dashboard" className="hover:text-gray-300 sm:text-base" onClick={() => setIsOpen(false)}>Dashboard</Link>
             </li>
 
             {/* Conditional Links */}
             {isSignedIn ? (
               <SignedIn>
-                <li className="flex gap-2  sm:text-base">
+                <li className="flex gap-2 sm:text-base">
                   <UserButton />
                   {user?.fullName}
                 </li>
@@ -56,10 +56,10 @@ export default function Navbar() {
             ) : (
               <SignedOut>
                 <li>
-                  <Link to="/sign-in" className="hover:text-gray-300  sm:text-base" onClick={() => setIsOpen(false)}>Sign In</Link>
+                  <Link to="/sign-in" className="hover:text-gray-300 sm:text-base" onClick={() => setIsOpen(false)}>Sign In</Link>
                 </li>
                 <li>
-                  <Link to="/sign-up" className="hover:text-gray-300  sm:text-base" onClick={() => setIsOpen(false)}>Sign Up</Link>
+                  <Link to="/sign-up" className="hover:text-gray-300 sm:text-base" onClick={() => setIsOpen(false)}>Sign Up</Link>
                 </li>
               </SignedOut>
             )}

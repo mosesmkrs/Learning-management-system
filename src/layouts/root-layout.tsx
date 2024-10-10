@@ -3,6 +3,7 @@ import { ClerkProvider } from '@clerk/clerk-react'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import '../index.css'
+import { shadesOfPurple } from '@clerk/themes'
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
@@ -18,6 +19,7 @@ export default function RootLayout() {
       routerPush={(to) => navigate(to)}
       routerReplace={(to) => navigate(to, { replace: true })}
       publishableKey={PUBLISHABLE_KEY}
+      appearance={{ baseTheme: shadesOfPurple, }}
     >
       <Navbar/>
       <main className='bg-slate-800'>
